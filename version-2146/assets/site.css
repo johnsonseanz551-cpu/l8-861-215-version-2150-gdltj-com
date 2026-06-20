@@ -1,0 +1,254 @@
+body {
+  background: #f5f5f4;
+}
+
+.site-logo-mark {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #0ea5e9, #f97316);
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.25);
+}
+
+.footer-mark {
+  background: linear-gradient(135deg, #38bdf8, #fb923c);
+}
+
+.menu-line {
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  margin: 4px 0;
+  background: currentColor;
+  border-radius: 999px;
+}
+
+.mobile-nav.is-open {
+  display: block;
+}
+
+.section-icon {
+  color: #0ea5e9;
+  font-size: 0.9rem;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1000ms ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  transition: background 200ms ease;
+  backdrop-filter: blur(8px);
+}
+
+.hero-control:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 250ms ease;
+}
+
+.hero-dot.is-active {
+  width: 2rem;
+  background: #fff;
+}
+
+.page-hero {
+  background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.15), transparent 34rem), linear-gradient(180deg, #ffffff, #f5f5f4);
+  border-bottom: 1px solid #e7e5e4;
+}
+
+.category-tile {
+  position: relative;
+  overflow: hidden;
+}
+
+.category-tile::after {
+  content: "";
+  position: absolute;
+  inset: auto -2rem -4rem auto;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.08);
+}
+
+.rank-num {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #0ea5e9;
+  color: #fff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.rank-num.large {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-top: 0.25rem;
+}
+
+.detail-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  filter: blur(18px);
+  transform: scale(1.08);
+}
+
+.detail-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(2, 6, 23, 0.95), rgba(2, 6, 23, 0.72), rgba(2, 6, 23, 0.92));
+}
+
+.detail-hero > .relative {
+  z-index: 1;
+}
+
+.player-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: #020617;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.28);
+  aspect-ratio: 16 / 9;
+}
+
+.player-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #020617;
+  cursor: pointer;
+  transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.play-overlay img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+  filter: blur(1px);
+}
+
+.play-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.18), rgba(0, 0, 0, 0.45));
+}
+
+.play-overlay.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.play-circle {
+  position: relative;
+  z-index: 1;
+  width: 5rem;
+  height: 5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #0ea5e9;
+  color: #fff;
+  font-size: 2rem;
+  box-shadow: 0 16px 40px rgba(14, 165, 233, 0.45);
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  border-radius: 0.875rem;
+  background: #f5f5f4;
+}
+
+.info-row strong {
+  color: #1c1917;
+  text-align: right;
+}
+
+.js-movie-card.is-hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero-control {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.5rem;
+  }
+
+  .player-shell {
+    border-radius: 0.875rem;
+  }
+
+  .play-circle {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+}
